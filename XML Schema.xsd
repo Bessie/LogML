@@ -1,6 +1,41 @@
-<?xml version="1.0"?>
-
-<xs:schema>
-...
-...
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="value" type="xs:string"/>
+  <xs:element name="variable">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="value" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="function" type="xs:string"/>
+  <xs:element name="result">
+    <xs:complexType mixed="true">
+      <xs:sequence>
+        <xs:element ref="value" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="variables">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="variable" maxOccurs="unbounded" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="functions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="function"/>
+        <xs:element ref="result"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="semanticTable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="variables"/>
+        <xs:element ref="functions"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

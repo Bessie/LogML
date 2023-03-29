@@ -7,12 +7,12 @@ This is in theory simple since the aim would be to define some XML elements and 
 Some target XML for this might be:
 
     <semanticTable>
-    <variables>
-    <variable>P<value>T</value><value>F</value></variable>
+    <variables values='2' 1='T' 2='F'>
+    <var>P<val>T</val><value>F</value></var>
     <variable>Q<value>T</value><value>F</value><value>T</value><value>F</value></variable>
     </variables>
     <functions>
-    <function>P ∨ Q</function>
+    <operator type='and'>∨</operator>
     <result>P ∨ Q<value>T</value><value>F</value><value>T</value><value>F</value></result>
     </functions>
     </semanticTable>

@@ -6,13 +6,13 @@ This is in theory simple since the aim would be to define some XML elements and 
 
 Some target XML for this might be:
 
-    <semanticTable>
+    <tt>
     <variables values='2' 1='T' 2='F'>
     <var>P<val>T</val><value>F</value></var>
-    <variable>Q<value>T</value><value>F</value><value>T</value><value>F</value></variable>
+    <var>Q<value>T</value><value>F</value><value>T</value><value>F</value></variable>
     </variables>
-    <functions>
-    <operator type='and'>∨</operator>
-    <result>P ∨ Q<value>T</value><value>F</value><value>T</value><value>F</value></result>
-    </functions>
-    </semanticTable>
+    <operator type='and'>∨ <val>T</val></operator>
+    </tt>
+    
+    <semanticProof>
+    </semanticProof>

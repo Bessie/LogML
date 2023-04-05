@@ -16,3 +16,27 @@ Some target XML for this might be:
     
     <semanticProof>
     </semanticProof>
+
+
+some code for later:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="200" height="100" >
+Your browser does not support the HTML canvas tag.</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(100,0);
+ctx.lineTo(200,100);
+ctx.stroke();
+ctx.moveTo(100,0);
+ctx.lineTo(0,100);
+ctx.stroke();
+</script>
+
+</body>
+</html>
